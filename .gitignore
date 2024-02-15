@@ -4,13 +4,27 @@
 ### STS ###
 .apt_generated
 .classpath
-.factorypath
 .project
 .settings
 .springBeans
 .sts4-cache
 
+
 # Created by https://www.gitignore.io/api/git,java,maven,eclipse,windows
+
+### Eclipse ###
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
 
 # External tool builders
 .externalToolBuilders/
@@ -27,6 +41,8 @@
 # CDT- autotools
 .autotools
 
+# Java annotation processor (APT)
+.factorypath
 
 # PDT-specific (PHP Development Tools)
 .buildpath
@@ -40,12 +56,13 @@
 # TeXlipse plugin
 .texlipse
 
-
 # Code Recommenders
 .recommenders/
 
-# Annotation Processing
-.apt_generated/
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
 
 .sts4-cache/
 
@@ -132,6 +149,19 @@ $RECYCLE.BIN/
 *.iml
 *.ipr
 
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
 ### Some additional ignores (sort later)
 *.DS_Store
 *.sw?
@@ -146,3 +176,7 @@ target
 .gradle
 README.html
 .exercism
+
+.DS_Store
+out/
+.micronaut/
