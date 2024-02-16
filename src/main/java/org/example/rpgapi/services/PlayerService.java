@@ -1,8 +1,11 @@
 package org.example.rpgapi.services;
 
+import org.example.rpgapi.errors.PlayerNotFoundException;
 import org.example.rpgapi.models.Player;
 import org.example.rpgapi.repositories.PlayerRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 /**
  * Service to access to player's repository
@@ -22,5 +25,20 @@ public class PlayerService {
      */
     public Player createPlayer(Player player) {
         return repository.save(player);
+    }
+
+    /**
+     * Find a player with its id
+     * @param id the int of the id
+     * @return the player founded
+     * @throws PlayerNotFoundException if player not found
+     */
+    public Player getPlayerById(int id){
+        var p = repository.findById(id);
+
+        if(p.isEmpty()){
+            throw new PlayerNotFoundException(id);
+        }
+        return p.get();
     }
 }
