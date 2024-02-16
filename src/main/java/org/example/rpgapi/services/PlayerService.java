@@ -41,4 +41,12 @@ public class PlayerService {
         }
         return p.get();
     }
+
+    /**
+     * Remove a player form the repository
+     * @param id the int of the id
+     */
+    public void deletePlayerById(int id){
+        repository.deleteById(id);
+    }
 }
