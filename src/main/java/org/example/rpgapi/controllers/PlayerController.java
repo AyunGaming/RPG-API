@@ -39,4 +39,13 @@ public class PlayerController {
     public Player findById(@RequestParam int id){
         return service.getPlayerById(id);
     }
+
+    /**
+     * Remove a player
+     * @param id the int of the id
+     */
+    @DeleteMapping("/deleteById/player")
+    public void deleteById(@RequestParam int id){
+        service.deletePlayerById(id);
+    }
 }
