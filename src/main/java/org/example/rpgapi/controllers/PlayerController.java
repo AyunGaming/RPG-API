@@ -48,4 +48,14 @@ public class PlayerController {
     public void deleteById(@RequestParam int id){
         service.deletePlayerById(id);
     }
+
+    /**
+     * Update a player
+     * @param player the player to update
+     * @return the player updated
+     */
+    @PostMapping("update/player")
+    public Player update(@RequestBody Player player){
+        return service.updatePlayer(player);
+    }
 }
