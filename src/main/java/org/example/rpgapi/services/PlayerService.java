@@ -20,11 +20,12 @@ public class PlayerService {
 
     /**
      * Add a new player in the repository
-     * @param player the player to add
+     * @param name the name of the player
      * @return the player created
      */
-    public Player createPlayer(Player player) {
-        return repository.save(player);
+    public Player createPlayer(String name) {
+        Player p = new Player(name);
+        return repository.save(p);
     }
 
     /**

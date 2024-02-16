@@ -27,7 +27,7 @@ public class PlayerController {
      */
     @PostMapping("/create/player")
     public Player createPlayer(@RequestBody Player player){
-        return service.createPlayer(player);
+        return service.createPlayer(player.getName());
     }
 
     /**

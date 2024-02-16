@@ -47,6 +47,10 @@ public class Player {
     //endregion
 
     //region Constructors
+    public Player(String name) {
+        this.name = name;
+    }
+
     public Player() {
     }
     //endregion
