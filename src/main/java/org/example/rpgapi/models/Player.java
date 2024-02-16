@@ -2,10 +2,15 @@ package org.example.rpgapi.models;
 
 import jakarta.persistence.*;
 
+/**
+ * Simple player class
+ */
+
 @Entity
 @Table(name="player")
 public class Player {
 
+    //region Attributes
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -17,47 +22,32 @@ public class Player {
     private int experience;
 
     private int health;
+    //endregion
 
-    public Player() {
-    }
-
+    //region Properties
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getLevel() {
         return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
     }
 
     public int getExperience() {
         return experience;
     }
 
-    public void setExperience(int experience) {
-        this.experience = experience;
-    }
-
     public int getHealth() {
         return health;
     }
+    //endregion
 
-    public void setHealth(int health) {
-        this.health = health;
+    //region Constructors
+    public Player() {
     }
+    //endregion
 }
