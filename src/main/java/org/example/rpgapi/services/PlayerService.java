@@ -5,8 +5,6 @@ import org.example.rpgapi.models.Player;
 import org.example.rpgapi.repositories.PlayerRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 /**
  * Service to access to player's repository
  */
