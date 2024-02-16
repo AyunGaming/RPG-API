@@ -49,4 +49,13 @@ public class PlayerService {
     public void deletePlayerById(int id){
         repository.deleteById(id);
     }
+
+    /**
+     * Update a player in the repository
+     * @param player the player to update
+     * @return the player updated
+     */
+    public Player updatePlayer(Player player){
+        return repository.save(player);
+    }
 }
